@@ -1,0 +1,29 @@
+.about-container {
+  padding: 40px 0;
+  background-color: #6c63ff;
+}
+/* @media screen and (max-width: 860px) {
+  .about-container {
+    align-items: center;
+    padding: 30px;
+  }
+}
+@media screen and (max-width: 450px) {
+    .achieve-container {
+      padding: 30px 30px;
+    }
+  }
+  @media screen and (max-width: 350px) {
+    .about-container  {
+      padding: 20px ;
+    }
+  }
+   */
+   
+@media screen and (max-width:670px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}

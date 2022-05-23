@@ -1,0 +1,13 @@
+.welcome-calendar-container {
+  justify-content: center;
+  align-items: center;
+  padding: 30px 40px;
+}
+
+@media screen and (max-width:670px) {
+  .welcome-calendar-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}

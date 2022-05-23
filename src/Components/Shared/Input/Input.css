@@ -1,0 +1,27 @@
+.input {
+  border: none;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  outline: none;
+  background-color: transparent;
+  padding-bottom: 3px;
+  width: 100%;
+  margin: 10px 5px;
+}
+.input::placeholder {
+  color: #fff;
+  opacity: .8; 
+}
+
+.input:-ms-input-placeholder {
+  color: #fff;
+}
+
+.input::-ms-input-placeholder {
+  color: #fff;
+}
+
+
+.errorInput{
+  border-bottom:1px solid #e74c3c ;
+}

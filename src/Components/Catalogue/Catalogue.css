@@ -1,0 +1,20 @@
+.catalouge-container{
+    padding: 40px 30px;
+    justify-content: center;
+    align-items: center;
+}
+.buttons:nth-child(1){
+    margin-right: 10px;
+}
+
+.buttons:nth-child(2){
+    margin-left: 10px;
+}
+
+@media screen and (max-width:670px) {
+  .catalouge-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}

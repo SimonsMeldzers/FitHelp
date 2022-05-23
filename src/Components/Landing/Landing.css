@@ -1,0 +1,30 @@
+.landing-container {
+  padding: 40px 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* @media screen and(max-width:670px) {
+  .landing-container{
+    
+  }
+} */
+/* @media screen and (max-width: 450px) {
+  .landing-container {
+    padding: 30px 30px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .landing-container {
+    padding: 20px 30px;
+  }
+}*/
+
+  
+@media screen and (max-width:670px) {
+  .landing-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}

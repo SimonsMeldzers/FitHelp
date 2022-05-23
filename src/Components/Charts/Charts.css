@@ -1,0 +1,41 @@
+.charts-container{
+    padding: 30px 40px;
+}
+.range{
+    padding: 10px 20px;
+    margin :0 10px;
+    background-color: lightgray;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+.range:hover{
+    background-color: #6c63ff;
+    color: #fff;
+}
+.selected-range{
+    background-color: #6c63ff;
+    color: #fff;
+}
+.range-container{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media screen and (max-width:740px) {
+    .btns-container span {
+        display: block;
+        padding: 10px 20px;
+        margin: 5px;
+    }
+  }
+
+  
+
+@media screen and (max-width:835px) {
+    .btns-container span {
+        padding: 5px 10px;
+    }
+  }

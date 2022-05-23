@@ -1,0 +1,21 @@
+.welcomedata-container{
+    padding: 30px 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+ 
+@media screen and (max-width:670px) {
+    .welcomedata-container {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+/* @media screen and (max-width: 576px) {
+    .welcomedata-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+} */

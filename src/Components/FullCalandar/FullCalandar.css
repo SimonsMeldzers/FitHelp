@@ -1,0 +1,50 @@
+.full-calender-container {
+    padding: 20px 40px;
+}
+
+.calandar-form {
+    text-align: center;
+}
+
+.richTextContainer {
+    background: #fff;
+    color: #000;
+}
+
+.richTextEditor {
+    border: 2px solid #c4c4c4;
+    padding: 10px 20px 24px 20px;
+    border-radius: 6px;
+}
+
+.colorContainer {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px 0
+}
+
+.color {
+    height: 25px;
+    width: 50px;
+    cursor: pointer;
+}
+
+.selectedColor {
+    height: 25px;
+}
+
+.red {
+    background-color: #e74c3c;
+}
+
+.green {
+    background-color: #2ecc71;
+}
+
+.blue {
+    background-color: #3498db;
+}
+
+.yellow {
+    background-color: #f39c12;
+}

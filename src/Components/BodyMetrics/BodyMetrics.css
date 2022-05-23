@@ -1,0 +1,56 @@
+.profile-data-container {
+  width: 100%;
+}
+.profile-content {
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.inputss {
+  width: 100%;
+}
+.profile-input {
+  flex-direction: column;
+  margin: 10px 0;
+}
+.value {
+  background-color: #fff;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 10px;
+  border: 1px solid #6c63ff;
+}
+.result {
+  margin-top: 30px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.heart {
+  font-size: 35px;
+  margin-bottom: 5px;
+}
+
+.UnderWeight {
+  color: #02AEF3;
+}
+
+.Healthy {
+  color: #92d14f;
+}
+.Overweight {
+  color: #FFFF01;
+}
+.Obese {
+  color: #FFBF00;
+}
+.Extemely {
+  color: #FE0000;
+}
+.profile-input input{
+  width: 100%;
+  margin: 5px;
+  border-radius: 10px;
+}

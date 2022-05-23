@@ -1,0 +1,66 @@
+.recomendations-container {
+    padding: 30px 40px;
+}
+
+.recomendations-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.recomendation-item {
+    padding: 20px;
+    background-color: #6C63FF;
+    color: #fff;
+    border-radius: 20px;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.pic {
+    background-color: #fff;
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+}
+
+.recomendation-item p {
+    margin-left: 10px;
+}
+
+.flex-wrapper {
+    align-items: stretch;
+}
+
+.pic-img {
+    width: 100%;
+    height: 100%;
+}
+
+.diets {
+    margin-left: 40px;
+    width: 90%;
+}
+
+.title {
+    font-size: 17px;
+    font-weight: bold;
+    padding: 20px 0;
+}
+
+.description {
+    font-size: 15px;
+    padding: 20px 0;
+}
+
+@media screen and (max-width:576px) {
+    .flex-wrapper {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .diets {
+        margin: 0;
+        margin-top: 20px;
+    }
+}

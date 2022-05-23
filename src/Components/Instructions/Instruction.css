@@ -1,0 +1,53 @@
+.instructions-container {
+  padding: 30px 40px;
+  align-items: center;
+  background-color: #6c63ff;
+  justify-content: center;
+  align-items: center;
+}
+.instructions-container h3 {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.form {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 20px;
+}
+.inputs-container {
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.input-container {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.btn-container {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+ 
+@media screen and (max-width:670px) {
+  .instructions-container {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
+@media screen and (max-width:474px) {
+ .inputs-container{
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+ }
+ .input-container{
+   margin: 5px 0;
+   width: 100%;
+ } 
+}

@@ -1,0 +1,23 @@
+.login-header {
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.login-header h1 {
+  font-size: 50px;
+  font-weight: normal;
+}
+.login-header span {
+  font-weight: normal;
+  font-size: 18px;
+}
+.login-header .link {
+  font-style: italic;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.btn-container {
+  text-align: center;
+}
+.link-container{
+  text-align: right;
+}

@@ -1,0 +1,44 @@
+.exercisesDietsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px 70px;
+    justify-content: space-evenly;
+    row-gap: 30px;
+}
+
+.exerciseDietsHeading h2 {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 30px;
+}
+
+.exerciseDietsCard {
+    cursor: pointer;
+    border: 2px solid #6c63ff;
+    border-radius: 10px;
+    transition: .8s
+}
+
+.exerciseDietsCard .img {
+    width: 248px;
+    height: 248px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.exerciseDietsCard p {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 20px;
+    color: #000000;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.exerciseDietsCard:hover {
+    box-shadow: 4px 5px 20px rgb(0 0 0 / 50%);
+    transform: scale(1.1);
+}
