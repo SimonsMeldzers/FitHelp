@@ -15,18 +15,20 @@ import {
 } from "firebase/firestore";
 import { auth, db } from "./Firebase";
 
-// Creating new User
+// Veidojam jaunu lietotāju
 const createUser = async (payload) => {
+  // Nododam visus parametrus kā payoload
   const { email, password, gender, weight, height, firstName, lastName, dob } =
     payload;
 
   try {
+    // Firebase funkcija jauna lietotāja reģistrēšanai ar e-pastu un paroli
     const { user: cred } = await createUserWithEmailAndPassword(
       auth,
       email,
       password
     );
-
+    // Jauna lietotāja datu objekts
     const newUser = {
       firstName,
       lastName,
@@ -39,18 +41,23 @@ const createUser = async (payload) => {
       avatarUrl:
         "https://api-private.atlassian.com/users/8f525203adb5093c5954b43a5b6420c2/avatar",
     };
+
+    // Pievienojam jaunus lietotāja datus Firebase  
     const response = await AddData("users", newUser.uid, newUser);
     const date = new Date().getTime();
     const heightInMeter = newUser?.height / 100;
     const BMI = newUser?.weight / (heightInMeter * heightInMeter);
+    // Objekts ar datiem priekš grafiku renderēšanas
     const obj = {
       BMI: [{ value: Math.round(BMI), date }],
       calories: [{ value: 0, date }],
       protein: [{ value: 0, date }],
       weight: [{ value: newUser?.weight, date }],
     };
+    // Pievienojam grafiku datus Firebase
     const res2 = await AddData("graphdata", newUser.uid, obj);
     return { user: response, graphData: res2 };
+    // Izvadām kļūdas, ja tādas parādās
   } catch (error) {
     const errorCode = error.code;
     const errorMessage = error.message;
@@ -58,14 +65,18 @@ const createUser = async (payload) => {
   }
 };
 
-// Sign in User
+// Lietotāja autorizēšanās
 const signInUser = async (payload) => {
+  // Padodam parametrus: e-pastu un paroli, kā payload
   const { email, password } = payload;
   try {
     const { user } = await signInWithEmailAndPassword(auth, email, password);
+    // Izvelkam datus par lietotāju no Firebase
     const response = await getData("users", user.uid);
+    // Izvelkam datus par lietotāja grafikiem no Firebase
     const response2 = await getData("graphdata", user.uid);
     return { user: response, graphData: response2 };
+  // Izvadām kļūdas, ja tādas parādās
   } catch (error) {
     const errorCode = error.code;
     const errorMessage = error.message;
@@ -73,7 +84,7 @@ const signInUser = async (payload) => {
   }
 };
 
-// Adding New Data to the firebase
+// Definējam AddData funkciju lai padotu datus uz Firebase
 const AddData = async (collection, document, data) => {
   await setDoc(doc(db, collection, document), data);
   return data;
