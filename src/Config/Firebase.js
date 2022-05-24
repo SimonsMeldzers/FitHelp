@@ -15,7 +15,7 @@ const firebaseConfig = {
     measurementId: "G-LD7K0WP83X"
 };
 
-// Initialize Firebase
+// Palaiž Firebase
 const app = initializeApp(firebaseConfig);
 export const storage = getStorage(app);
 export const auth = getAuth()
