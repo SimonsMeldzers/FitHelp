@@ -63,21 +63,4 @@ const formattingData = (obj) => {
   return newObj;
 };
 
-// Funkcija kas maina diapazonu(range) priekš showAble grafikiem
-const handleRangeChange = (range, payload) => {
-  const maxRange = new Date();
-  const minRange = new Date(Date.now() - range * 24 * 60 * 60 * 1000);
-
-  let newarr = [];
-  for (let i = 0; i < payload?.length; i++) {
-    const date = new Date(payload[i]?.date);
-    if (date >= minRange && date <= maxRange) {
-      // Aizsūta jaunus elementus masīva beigās, un atgriež jauna masīva garumu
-      newarr.push(payload[i]);
-    } else {
-    }
-  }
-  return newarr;
-};
-
 export default Charts;
