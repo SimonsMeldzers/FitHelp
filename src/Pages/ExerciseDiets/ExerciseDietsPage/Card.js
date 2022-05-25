@@ -7,6 +7,7 @@ export default function Card({ title, image, cardColor, id, collectionType }) {
   return (
     <div
       onClick={() =>
+        // Izveido saiti priekš apakšgrupām
         navigate("/exercise-diets-list/" + collectionType + "/" + id)
       }
       className="exerciseDietsCard"
@@ -15,8 +16,9 @@ export default function Card({ title, image, cardColor, id, collectionType }) {
       <div
         className="img"
         style={{
+          // Ja datubāzē ir norādīta bilde, rāda to, ja nav, rāda tukšu bildi
           backgroundImage: `url(${
-            image ||
+            image || 
             "https://www.seekpng.com/png/detail/366-3669598_bodybuilding-free-icon-bodybuilding.png"
           })`,
         }}
