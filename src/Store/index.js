@@ -17,6 +17,7 @@ const store = configureStore({
         calendar: CalendarSlice,
         recommended: RecommendedSlice,
     },
+    // Middleware ļauj pārtvert katru ,uz reduktoru nosūtīto, darbību, lai varētu veikt izmaiņas darbībā, vai atcelt darbību.
     middleware: (getDefaultMiddleware) =>
         getDefaultMiddleware({
             serializableCheck: false,
