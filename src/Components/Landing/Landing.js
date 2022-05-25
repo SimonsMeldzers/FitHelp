@@ -3,7 +3,7 @@ import "./Landing.css";
 
 const text = {
   title: "Welcome to FitHelp",
-  desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac cursus eros. Integer sit amet massa ex. Cras varius felis a eros viverra semper. Curabitur ut molestie dui. Phasellus sed elit ligula. Aliquam erat volutpat. Duis sodales tellus tortor, sit amet posuere libero viverra vel. In vestibulum mauris quis ex finibus pharetra. Maecenas hendrerit eu elit a viverra. Proin fringilla sit amet ligula at volutpat. Pellentesque tempus faucibus elementum.",
+  desc: "A platform that's going to make your body transformation easier! We offer a fitness assistant app, which is easy to use, intuitive, and offers a large catalogue of different exercises and diets! Read information below to learn more about us!",
 };
 
 function Landing() {
