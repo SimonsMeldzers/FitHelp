@@ -18,7 +18,7 @@ export default function ExerciseDiets() {
       try {
         // No Firebase datubāzes veicam dokumenta atsuaci uz documentID
         const docRef = doc(db, collectionType, documentId);
-        // Tiek veikta kolekcijas atsuace ar komunetaID = "group" 
+        // Tiek veikta kolekcijas atsuace ar documentID = "group" 
         const colRef = collection(docRef, "group");
         // Tiek veikta colRef kolekcijas atsuace, kur groupID = "detail"
         const groupRef = collection(colRef, groupId, "detail");
