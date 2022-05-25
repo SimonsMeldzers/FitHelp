@@ -14,6 +14,7 @@ export default function ListItem({
     <div
       className="ListItem"
       onClick={() =>
+        // Izveido saiti priekš apakšgrupu elementiem
         navigate(
           "/exercise-diets-detail/" +
             collectionType +
@@ -27,6 +28,7 @@ export default function ListItem({
       <div
         className="img"
         style={{
+          // Ja datubāzē ir norādīta bilde, parāda to, ja nav, parāda tukšu bildi
           backgroundImage: `url(${
             image ||
             "https://www.pngkey.com/png/detail/233-2332677_image-500580-placeholder-transparent.png"
