@@ -4,6 +4,9 @@ import { Carousel } from "react-responsive-carousel";
 export default function CarouselComp({ images }) {
   return (
     <div style={{ flex: 0.9 }}>
+      {/* Pārbaudam, vai bildes ir vairāk par 0. 
+      Ja arguments paties, tad no masīva images izvelkam visas attēlu saites, 
+      un ievietojam tās img elementā */}
       {images && images.length > 0 ? (
         <Carousel>
           {images &&
@@ -24,6 +27,7 @@ export default function CarouselComp({ images }) {
         </Carousel>
       ) : (
         <Carousel>
+          {/* Ja masīvs images ir tukšs, ievietojam tukšas bildes */}
           {[""].map((url, index) => (
             <div key={index}>
               <img
