@@ -4,7 +4,8 @@ export default function Steps({ steps }) {
   return (
     <div className="StepContainer">
       <h2>Steps</h2>
-
+      {/* Ja masīva steps ir pievienoti apraksti, izvadam tos,
+      pretējā gadījumā, izvadam "There should be steps" */}
       {steps && steps.length > 0
         ? steps.map((step, index) => (
             <div key={index} className="StepItem">
