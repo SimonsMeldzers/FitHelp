@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 export const graphSlice = createSlice({
   name: "graph",
+  // Noklusējuma stāvoklis ir tukšs objekts, jo te tikai tiek definētas funkcijas priekš grafikiem 
   initialState: {},
   reducers: {
     setGraphData: (state, action) => {
