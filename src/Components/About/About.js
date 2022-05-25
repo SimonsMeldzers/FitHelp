@@ -3,7 +3,7 @@ import "./About.css";
 
 const text = {
   title: "About Us",
-  desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac cursus eros. Integer sit amet massa ex. Cras varius felis a eros viverra semper. Curabitur ut molestie dui. Phasellus sed elit ligula. Aliquam erat volutpat. Duis sodales tellus tortor, sit amet posuere libero viverra vel. In vestibulum mauris quis ex finibus pharetra. Maecenas hendrerit eu elit a viverra. Proin fringilla sit amet ligula at volutpat. Pellentesque tempus faucibus elementum.",
+  desc: " FitHelp is an application that's going to help you achieve your ultimate goal of body transformation. We offer a variety of different solutions to help you become a better you. FitHelp provides you progress graphs, calendar with notes, so you can track your progress, as well as a large collection of specialy picked exercises and diets. Other than that, we also help you decide on what to start with, using our recommendation system!",
   isWhite: true,
 };
 
