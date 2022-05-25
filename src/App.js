@@ -23,31 +23,44 @@ import { AddData } from "./Config/Services";
 import "./App.css";
 
 function App() {
+  // Izmantojam useDispatch lai varētu mijiedarboties ar stāvokļiem
   const dispatch = useDispatch();
+
   const [loading, setLoading] = useState(false);
   useEffect(() => {
+    // Palaižam mājaslapas datu ielādēšanos
     setLoading(true);
     (async () => {
+      // Novērotājs (Observer), kas pārbauda vai lietotājs veiksmīgi ir autorizēts
       onAuthStateChanged(auth, async (user) => {
         if (user) {
+          // Izvelkam datus par lietotāja id
           dispatch(setUser(await getData("users", user.uid)));
+          // Lietotājs ir autorizējies
           dispatch(setIsAuthenticated(true));
+          // Nav jārāda autorizēšanās logs(Modal)
           dispatch(setShowModal(false));
         }
+        // Beidzam mājaslapas datu ielādēšanu
         setLoading(false);
       });
     })();
+    // Funkcija tiek izmantota kad veiktas izmaiņas dispatch
   }, [dispatch]);
   return (
     <div>
+      {/* Ja dati vēl nav ielādējušies parādam tekstu "Please Wait ..." */}
       {false ? (
         <Loader />
       ) : (
         <div>
+          {/* Vienmēr kad mājaslapa tiek ielādēta, lietotāja skats tiek tiek pievērsts uz augšu */}
           <ScrollToTop />
 
           <Routes>
+            {/* Ceļvedis uz sākumlapu */}
             <Route path="/" element={<Home />} />
+            {/* Ceļvedis uz vingrojumu un ēdienu lapu */}
             <Route
               path="/exercise-diets"
               element={
@@ -56,6 +69,7 @@ function App() {
                 </PrivateRoute>
               }
             />
+            {/* Ceļvedis uz vingrojumu un ēdienu apakšgrupām */}
             <Route
               path="/exercise-diets-list/:collectionType/:id"
               element={
@@ -64,6 +78,7 @@ function App() {
                 </PrivateRoute>
               }
             />
+            {/* Ceļvedis uz vingrojumu un ēdienu apakšgrupu elementiem */}
             <Route
               path="/exercise-diets-detail/:collectionType/:documentId/:groupId"
               element={
@@ -72,6 +87,7 @@ function App() {
                 </PrivateRoute>
               }
             />
+            {/* Ceļvedis uz grafiku sadaļu */}
             <Route
               path="/data"
               element={
@@ -80,6 +96,7 @@ function App() {
                 </PrivateRoute>
               }
             />
+            {/* Ceļvedis uz kalendāra sadaļu */}
             <Route
               path="/calendar"
               element={
@@ -88,6 +105,7 @@ function App() {
                 </PrivateRoute>
               }
             />
+            {/* Ceļvedis uz lietotāja rekomendācijām */}
             <Route
               path="/recommended-detail"
               element={
@@ -96,6 +114,7 @@ function App() {
                 </PrivateRoute>
               }
             />
+            {/* Ceļvedis uz lietotāja profila sadaļu */}
             <Route
               path="/profile"
               element={
@@ -111,6 +130,7 @@ function App() {
   );
 }
 
+// Funkcija kas ļauj lietotājam pārvietoties pa mājaslapas lapām, tikai ja viņš ir autorizējies 
 function PrivateRoute({ children, redirectTo }) {
   const { isAuthenticated } = useSelector((state) => state.auth);
 
