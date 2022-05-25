@@ -12,18 +12,24 @@ export default function ExerciseDiets() {
   useEffect(() => {
     (async () => {
       try {
+        // Izvelk visus datus no "exercise" kolekcijas
         const responseEX = await getAllData("exercise");
+        // Izvelk visus datus no "diets" kolekcijas
         const responseDiets = await getAllData("diets");
+        // Pievieno visas vingrojumu grupas elementus
         setExercises(
           responseEX.docs.map((doc) => {
             return { ...doc.data(), id: doc.id };
           })
         );
+        // Pievieno visu ēdienu grupas elementus
         setDiets(
           responseDiets.docs.map((doc) => {
             return { ...doc.data(), id: doc.id };
           })
         );
+
+        // Izvada kļūdu ja tāda rodas
       } catch (error) {
         console.log(error);
       }
