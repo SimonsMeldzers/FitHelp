@@ -11,21 +11,30 @@ export default function ListContainer({ title, image }) {
   useEffect(() => {
     (async () => {
       try {
+        // No Firebase datubāzes veicam dokumenta atsuaci balstoties uz id
         const docRef = doc(db, collectionType, id);
+        // Tiek veikta kolekcijas atsuace ar id = "group" 
         const colRef = collection(docRef, "group");
+        // Dabūnam datus no datubāzes pēc mūsu colRef pieprasījuma
         const docSnap = await getDocs(colRef);
+        // Pievienojam list masīvam vērtības
         setList(
           docSnap.docs.map((doc) => {
             return { ...doc.data(), id: doc.id };
           })
         );
+        // Kļūdas gadījumā izvada kļūdu
       } catch (error) {
         console.log(error);
       }
     })();
+    // Kad tiek mainīts kāds no šiem parametriem, viņi tiek pārrenderēti
   }, [collectionType, id]);
   return (
     <div>
+      {/* Tiek veikta pārbaude, ja list masīvā ir elementi,
+      izvadam visus šos elementus,
+      pretējā gadījumā, izvadam "No collection found" */}
       {list && list.length > 0 ? (
         list?.map((item, index) => (
           <ListItem
@@ -42,8 +51,9 @@ export default function ListContainer({ title, image }) {
           <p>No {collectionType} found</p>
         </div>
       )}
-
-      {list.length === 1 && <div style={{ height: 200 }}></div>}
+      {/* Ja ir tikai viens elements, pievienojam konteineri ,ar augstumu 250px,
+       zem tā elementa lai futeris nebūtu pārāk tuvu un nebūtu vizuālu defektu*/}
+      {list.length === 1 && <div style={{ height: 250 }}></div>}
     </div>
   );
 }
