@@ -8,6 +8,9 @@ export default function Recommended({ recommended }) {
       </div>
 
       <div className="recommendedContainer">
+        {/* Veicam pārbaudi vai masīva ar attēliem ir attēlu saites.
+        Ja ir izvadam attēlus ar bildēm no masīva,
+        ja nav rakstam "There should be recomended equipment" */}
         {recommended && recommended.length > 0
           ? recommended.map((url, index) => (
               <div key={index} className="recommendedCard">
