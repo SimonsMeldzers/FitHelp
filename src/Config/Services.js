@@ -90,7 +90,7 @@ const AddData = async (collection, document, data) => {
   return data;
 };
 
-// Updating User Information
+// Lietotāja datu atjaunošana
 const updateUser = async (collection, document, user) => {
   const reference = doc(db, collection, document);
   await updateDoc(reference, {
@@ -100,11 +100,11 @@ const updateUser = async (collection, document, user) => {
   return user;
 };
 
-// Update the Nested Data
+// Ligzdoto datu (Nested data) atjaunināšana
 const updateNestedData = async (collection, document, field, data) => {
   const reference = doc(db, collection, document);
 
-  // Atomically add a new region to the "regions" array field.
+  // Automātiski pievieno jaunu reģionu "regions" masīva laukumam.
   await updateDoc(reference, {
     [field]: arrayUnion(data),
   });
@@ -112,25 +112,27 @@ const updateNestedData = async (collection, document, field, data) => {
   return data;
 };
 
+// Funkcija datu izvilkšanai no Firebase 
 const getData = async (collection, document) => {
   const docRef = doc(db, collection, document);
   const docSnap = await getDoc(docRef);
-
+  // Ja dokuments pastāv, izvadām dotā dokumenta datus, ja nē, konsolē izvadās teksts "No such document"
   if (docSnap.exists()) {
     return docSnap.data();
   } else {
     console.log("No such document!");
   }
 };
-// get all data from the collection
+// Funkcija kas izvelk visus datus no nepieciešamās kolekcijas no Firebase
 const getAllData = async (collectionName) => {
   return await getDocs(collection(db, collectionName));
 };
-// Password Reset
+// Funkcija paroles mainīšanas linka aizsūtīšanai uz e-pastu
 const sendPasswordReset = async (email) => {
   try {
     await sendPasswordResetEmail(auth, email);
     alert("Password reset link sent!");
+    // Ja tiek konstatēta kļūda, tā tiek izvadīta lietotājam
   } catch (err) {
     console.log(err);
     alert(err.message);
