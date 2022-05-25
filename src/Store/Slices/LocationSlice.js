@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 export const locationSlice = createSlice({
   name: "location",
+  // Funkcijas definēšana jaunu saišu veidošanai
   initialState: {
       url:''
   },
