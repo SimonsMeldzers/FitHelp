@@ -10,26 +10,33 @@ import Recommended from "./Recommended";
 import "./style.css";
 
 export default function ExerciseDiets() {
-  const { collectionType, documentId, groupId } = useParams();
+  const { collectionType, documentId, groupId } = useParams(); //useParams ļauj mums izmantot URL parametrus
   const [data, setData] = useState([]);
 
   useEffect(() => {
     (async () => {
       try {
+        // No Firebase datubāzes veicam dokumenta atsuaci uz documentID
         const docRef = doc(db, collectionType, documentId);
+        // Tiek veikta kolekcijas atsuace ar komunetaID = "group" 
         const colRef = collection(docRef, "group");
+        // Tiek veikta colRef kolekcijas atsuace, kur groupID = "detail"
         const groupRef = collection(colRef, groupId, "detail");
+        // Dabūnam datus no datubāzes pēc mūsu groupRef pieprasījuma
         const docSnap = await getDocs(groupRef);
 
         setData(
+          // Izvelkam datus no docSnap, un atgriežam tos mājaslapā
           docSnap.docs.map((doc) => {
             return { ...doc.data(), id: doc.id };
           })
         );
+        // Servera kļūdas gadījumā, izvada kļūdu konsolē
       } catch (error) {
         console.log(error);
       }
     })();
+    // Šī funkcija tiek palaista kad tiek mainīti kādi no šiem parametriem
   }, [collectionType, documentId, groupId]);
   return (
     <div>
