@@ -3,7 +3,7 @@ import "./WelcomeCalender.css";
 
 const text = {
   title: "Welcome to Your Calendar",
-  desc: "In your calendar you can track your progress, make notes and make sure you never skip everything! Phasellus sed elit ligula. Aliquam erat volutpat. Duis sodales tellus tortor, sit amet posuere libero viverra vel. In vestibulum mauris quis ex finibus pharetra. Maecenas hendrerit eu elit a viverra. Proin fringilla sit amet ligula at volutpat. Pellentesque tempus faucibus elementum.",
+  desc: "In your calendar you can track your progress, make notes and make sure you never skip anything! To start simply click on any date, and type in any information you would like to store, then pick a color, that's going to indicate the type of note this is, and click 'Add'. As simple as that, you can now go back whenever you wish, to check on your exercise and dietary routine.",
 };
 
 function WelcomeCalender() {
