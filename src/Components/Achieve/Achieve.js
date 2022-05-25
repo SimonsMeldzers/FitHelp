@@ -6,7 +6,7 @@ import "./Achieve.css";
 
 const text = {
   title: "Achieve your goals faster!",
-  desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac cursus eros. Integer sit amet massa ex. Cras varius felis a eros viverra semper. Curabitur ut molestie dui. Phasellus sed elit ligula. Aliquam erat volutpat. Duis sodales tellus tortor, sit amet posuere libero viverra vel. In vestibulum mauris quis ex finibus pharetra. Maecenas hendrerit eu elit a viverra. Proin fringilla sit amet ligula at volutpat. Pellentesque tempus faucibus elementum.",
+  desc: "Achieve your desired physique together, with FitHelp. Data shows, that using an online fitness assistant, drastically improves the progress of user's body appearance. By choosing us we guarantee drastic results in just 1 month! Our ultimate goal is making an app that can improve everybody's life, and our app is completely FREE!",
   isWhite: true,
 };
 
