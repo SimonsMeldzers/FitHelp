@@ -7,7 +7,7 @@ import "./Catalogue.css";
 
 const text = {
   title: "See our catalogue of diets and training!",
-  desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac cursus eros. Integer sit amet massa ex. Cras varius felis a eros viverra semper. Curabitur ut molestie dui. Phasellus sed elit ligula. Aliquam erat volutpat. Duis sodales tellus tortor, sit amet posuere libero viverra vel. In vestibulum mauris quis ex finibus pharetra. Maecenas hendrerit eu elit a viverra. Proin fringilla sit amet ligula at volutpat. Pellentesque tempus faucibus elementum.",
+  desc: "We have multiple specially hand-picked training programms and diet asorti for everyone. Our large catalogue of options won't leave you indifferent! We also provide a recommendation system, based on your body metrcises, which is going to make picking the right thing for you a lot easier! See the options now, it's FREE!",
 };
 
 function Catalogue() {
