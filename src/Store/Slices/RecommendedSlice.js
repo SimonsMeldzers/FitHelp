@@ -5,6 +5,7 @@ export const recommendedSlice = createSlice({
     initialState: {
         recommendedData: null,
     },
+    // Funkcija rekomendāciju datu uzstādīšanai (images, title, description, steps, recommended)
     reducers: {
         setRecommended: (state, action) => {
             state.recommendedData = action.payload;
