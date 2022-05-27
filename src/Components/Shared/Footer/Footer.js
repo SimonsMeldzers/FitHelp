@@ -21,11 +21,11 @@ function Footer() {
 
           <ul>
             <li>
-              Lorem ipsum dolor sit amet, consectetur <br />
-              adipscing elit. Phasellus ac cursus eros.
+              Rīga, Barona iela 19, LV-1001 <br />
+              Vilnus, Ringuvos g. 51a, LT-45230
             </li>
-            <li>+333 22222222</li>
-            <li>example@mail.com</li>
+            <li>+371 23344738</li>
+            <li>info@fithelp.com</li>
           </ul>
         </div>
 
