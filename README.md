@@ -1,6 +1,6 @@
 # Projekts
 
-https://fithelp.netlify.app/
+https://fithelp-simonsmeldzers.vercel.app/
 
 # Projekta apraksts
 
