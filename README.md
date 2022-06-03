@@ -1,6 +1,7 @@
 # Projekts
 
 https://fithelp-simonsmeldzers.vercel.app/
+https://ej.uz/fithelp
 
 # Projekta apraksts
 
